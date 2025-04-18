@@ -1,0 +1,8 @@
+id,name,owner,created_at,updated_at,public,avif_autodetection,file_size_limit,allowed_mime_types,owner_id
+gallery,gallery,,2025-02-25 22:56:39.531207+00,2025-02-25 22:56:39.531207+00,true,false,52428800,"[""image/png"",""image/jpeg"",""image/jpg""]",
+garment-images,garment-images,,2025-02-24 20:59:23.243354+00,2025-02-24 20:59:23.243354+00,false,false,,,
+model-images,model-images,,2025-02-24 20:58:55.038489+00,2025-02-24 20:58:55.038489+00,false,false,,,
+models,models,,2025-02-25 20:05:32.853695+00,2025-02-25 20:05:32.853695+00,true,false,52428800,"[""image/png"",""image/jpeg"",""image/jpg""]",
+products,products,,2025-02-25 22:12:55.279885+00,2025-02-25 22:12:55.279885+00,true,false,52428800,"[""image/png"",""image/jpeg"",""image/jpg""]",
+result-images,result-images,,2025-02-24 20:59:31.331747+00,2025-02-24 20:59:31.331747+00,true,false,,,
+"with check (bucket_id in ('model-images', 'garment-images', 'result-images'));","with check (bucket_id in ('model-images', 'garment-images', 'result-images'));",,2025-02-24 20:59:02.113504+00,2025-02-24 20:59:02.113504+00,false,false,,,

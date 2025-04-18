@@ -1,0 +1,75 @@
+{
+  "name": "trendymirror",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "upload-default-models": "node scripts/upload-default-models.js"
+  },
+  "dependencies": {
+    "@formatjs/intl-localematcher": "^0.6.0",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.1.1",
+    "@radix-ui/react-slot": "^1.1.2",
+    "@supabase/auth-helpers-nextjs": "^0.10.0",
+    "@supabase/supabase-js": "^2.49.1",
+    "@types/js-cookie": "^3.0.6",
+    "@types/uuid": "^10.0.0",
+    "accept-language": "^3.0.20",
+    "axios": "^1.7.9",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "framer-motion": "^12.4.10",
+    "i18next": "^24.2.2",
+    "i18next-http-backend": "^3.0.2",
+    "js-cookie": "^3.0.5",
+    "lucide-react": "^0.477.0",
+    "negotiator": "^1.0.0",
+    "next": "14.0.4",
+    "next-auth": "^5.0.0-beta.25",
+    "next-i18next": "^15.4.2",
+    "next-themes": "^0.4.4",
+    "node-fetch": "^3.3.2",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hot-toast": "^2.5.2",
+    "react-i18next": "^15.4.1",
+    "tailwind-merge": "^3.0.2",
+    "url": "^0.11.4",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@types/negotiator": "^0.6.3",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.16",
+    "dotenv": "^16.4.7",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "description": "TrendyMirror, yapay zeka destekli bir sanal giysi deneme platformudur. Kullanıcılar, kendi fotoğrafları üzerinde seçtikleri kıyafetleri gerçekçi bir şekilde deneyebilirler.",
+  "main": "next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emrekiraz/trendymirror.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emrekiraz/trendymirror/issues"
+  },
+  "homepage": "https://github.com/emrekiraz/trendymirror#readme"
+}

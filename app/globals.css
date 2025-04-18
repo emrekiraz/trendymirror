@@ -1,0 +1,383 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Primary Colors */
+  --color-blue-primary: #3B82F6;
+  --color-blue-secondary: #60A5FA;
+  --color-blue-tertiary: #93C5FD;
+  --color-purple-accent: #8B5CF6;
+  
+  /* Neutral Colors */
+  --color-white: #FFFFFF;
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-500: #6B7280;
+  --color-gray-700: #4B5563;
+  --color-gray-900: #1A2138;
+  
+  /* Functional Colors */
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-info: #3B82F6;
+  
+  /* Legacy variables */
+  --foreground-rgb: 75, 85, 99;
+  --background-rgb: 249, 250, 251;
+}
+
+@layer base {
+  /* Form elements default styling */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="url"],
+  input[type="tel"],
+  textarea {
+    @apply bg-white border border-gray-200 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-primary focus:border-transparent;
+    color: var(--color-gray-900);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--color-gray-500);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-gray-900);
+  }
+  
+  h1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  
+  h2 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  
+  h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  
+  h4 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-gray-700);
+    background: var(--color-gray-50);
+  }
+  
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 22px;
+      line-height: 28px;
+    }
+    
+    h2 {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    
+    h3 {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    
+    h4 {
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+}
+
+@layer components {
+  /* Input components */
+  .form-input {
+    @apply bg-white border border-gray-200 rounded-md px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-primary focus:border-transparent;
+  }
+
+  .input-url-paste {
+    @apply bg-gray-900 text-white rounded-full py-3 px-4 w-full border-0 focus:outline-none focus:ring-2 focus:ring-blue-primary;
+  }
+
+  .btn-primary {
+    background-color: var(--color-blue-primary);
+    color: white;
+    padding: 8px 16px;
+    height: 40px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    transition: all 150ms ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2563EB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Logo styling */
+  .logo-text {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    background: linear-gradient(to right, var(--color-blue-primary), var(--color-purple-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .btn-secondary {
+    background-color: white;
+    border: 1px solid var(--color-gray-200);
+    color: var(--color-gray-700);
+    padding: 8px 16px;
+    height: 40px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    transition: all 150ms ease-in-out;
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--color-gray-100);
+  }
+  
+  .btn-tertiary {
+    background-color: transparent;
+    color: var(--color-blue-primary);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    transition: all 150ms ease-in-out;
+  }
+  
+  .btn-tertiary:hover {
+    background-color: #EFF6FF;
+  }
+  
+  .btn-gradient {
+    background: linear-gradient(to right, #3B82F6, #8B5CF6);
+    color: white;
+    padding: 8px 16px;
+    height: 40px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    transition: all 150ms ease-in-out;
+  }
+  
+  .btn-gradient:hover {
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transform: translateY(-1px);
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    padding: 16px;
+    transition: all 150ms ease-in-out;
+  }
+  
+  .card:hover {
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .feature-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+  }
+  
+  .badge {
+    border-radius: 9999px;
+    padding: 2px 8px;
+    height: 20px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .badge-default {
+    background-color: var(--color-gray-100);
+    color: var(--color-gray-700);
+  }
+  
+  .badge-primary {
+    background-color: #EFF6FF;
+    color: var(--color-blue-primary);
+  }
+  
+  .badge-success {
+    background-color: #ECFDF5;
+    color: var(--color-success);
+  }
+  
+  .badge-warning {
+    background-color: #FFFBEB;
+    color: var(--color-warning);
+  }
+  
+  .badge-error {
+    background-color: #FEF2F2;
+    color: var(--color-error);
+  }
+  
+  .badge-new {
+    background-color: #F5F3FF;
+    color: var(--color-purple-accent);
+  }
+  
+  @media (max-width: 640px) {
+    .btn-primary, .btn-secondary, .btn-tertiary, .btn-gradient {
+      padding: 8px 12px;
+    }
+    
+    .card, .feature-card {
+      padding: 12px;
+    }
+  }
+}
+
+/* Form elements */
+input, select, textarea {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  color: #1f2937;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* Standard input fields */
+.form-input {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  color: #1f2937;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+}
+
+/* Special URL input fields */
+.input-url-paste {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  color: #1f2937;
+  width: 100%;
+  outline: none;
+}
+
+.input-url-paste:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+}
+
+/* Select elements */
+select.form-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+  print-color-adjust: exact;
+}
+
+/* Checkbox custom styling */
+input[type="checkbox"] {
+  appearance: none;
+  background-color: white;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25em;
+  transform: translateY(0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transform-origin: center;
+  transition: transform 0.1s ease-in-out;
+  background-color: #3b82f6;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  input, select, textarea {
+    background-color: white !important;
+    color: #1f2937 !important;
+    border-color: #4b5563;
+  }
+  
+  .form-input, .input-url-paste {
+    background-color: white !important;
+    color: #1f2937 !important;
+  }
+  
+  input::placeholder,
+  textarea::placeholder {
+    color: #9ca3af !important;
+  }
+  
+  input[type="checkbox"] {
+    background-color: white !important;
+  }
+} 
